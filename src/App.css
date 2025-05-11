@@ -1,0 +1,54 @@
+:root {
+  --background-color: #fbf8ef;
+  --accent-color: #16c47f;
+}
+
+.scroll-container {
+  height: 100%;
+  background-color: var(--background-color);
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+.scroll-content {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 18px; /* slightly reduced for Android feel */
+  gap: 10px;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.horizontal-list {
+  list-main-axis-gap: 12px;
+  padding-right: 12px;
+}
