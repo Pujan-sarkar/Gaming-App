@@ -1,15 +1,20 @@
-const GameCard  = () => {
-    return (
-    <view  className="card" style={{
-        width: "150px",
-    }}>
-        <image src="https://store-images.s-microsoft.com/image/apps.21507.13663857844271189.4c1de202-3961-4c40-a0aa-7f4f1388775a.20ed7782-0eda-4f9d-b421-4cc47492edc6" 
-        className="image"
-        />
+import type { IGamePreview } from "../types.ts";
+import { getImageUrl } from "../utils.ts";
 
-        <text className="card-title">Valorant</text>
-        </view>
-    );
+const GameCard = (props: IGamePreview) => {
+  const { id, name, cover } = props;
+  return (
+    <view
+      className="card"
+      style={{
+        width: "150px",
+      }}
+    >
+      <image src={getImageUrl(cover?.image_id)} className="image" />
+
+      <text className="card-title">{name}</text>
+    </view>
+  );
 };
 
 export default GameCard;

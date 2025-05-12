@@ -1,6 +1,8 @@
 :root {
   --background-color: #fbf8ef;
   --accent-color: #16c47f;
+  --card-border-color: #e0e0e0;
+  --card-shadow-color: rgba(0, 0, 0, 0.05);
 }
 
 .scroll-container {
@@ -14,38 +16,46 @@
   gap: 20px;
   display: flex;
   flex-direction: column;
+  padding: 0 16px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 16px;
   background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 18px; /* slightly reduced for Android feel */
-  gap: 10px;
+  border: 1px solid var(--card-border-color);
+  border-radius: 16px;
+  gap: 6px;
+  height: 360px; /* fixed height for uniform size */
+  box-shadow: 0px 2px 6px var(--card-shadow-color);
+  overflow: hidden;
 }
 
 .image {
   width: 100%;
-  aspect-ratio: 3/4;
-  border-radius: 10px;
+  height: 240px; /* fixed height */
+  border-radius: 12px;
+  background-color: #ddd; /* fallback color if image not loaded */
 }
 
 .card-title {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 6px; /* minimal gap from image */
 }
 
 .category {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-left: 20px;
+  padding-left: 16px;
 }
 
 .heading {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .horizontal-list {
